@@ -1,16 +1,25 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 
         int c;
-
         ArrayList<Integer> a = new ArrayList<Integer>();
-        a.add(8); a.add(7); a.add(4); a.add(10);
-        a.add(3); a.add(170); a.add(11); a.add(-4);
+
+        Random zufall = new Random();
+        for (int i=0; i<10; i++)
+            a.add(zufall.nextInt(1000));
+
+
+        for (int i = 0; i<a.size(); i++) {
+            System.out.print(a.get(i) + ", ");
+        }
+
+        System.out.println();
 
         for(int i=1; i<a.size(); i++) {
             for(int j=0; j<a.size()-i; j++) {
