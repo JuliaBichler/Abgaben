@@ -6,18 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int speicher;
+        int c;
 
         ArrayList<Integer> a = new ArrayList<Integer>();
         a.add(8); a.add(7); a.add(4); a.add(10);
-        a.add(3); a.add(17); a.add(11); a.add(-4);
+        a.add(3); a.add(170); a.add(11); a.add(-4);
 
         for(int i=1; i<a.size(); i++) {
             for(int j=0; j<a.size()-i; j++) {
                 if(a.get(j)>a.get(j+1)) {
-                    speicher=a.get(j);
+                    c=a.get(j);
                     a.set(j,a.get(j+1));
-                    a.set(j+1, speicher);
+                    a.set(j+1, c);
                 }
             }
         }
