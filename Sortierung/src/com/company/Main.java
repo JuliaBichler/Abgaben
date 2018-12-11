@@ -7,13 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        long t = System.currentTimeMillis();
         int c;
-        ArrayList<Integer> a = new ArrayList<Integer>();
-
-        Random zufall = new Random();
-        for (int i=0; i<10; i++)
-            a.add(zufall.nextInt(1000));
-
+        ArrayList<Integer> a = getRandomList(10000);
 
         for (int i = 0; i<a.size(); i++) {
             System.out.print(a.get(i) + ", ");
@@ -33,8 +29,29 @@ public class Main {
         for (int i = 0; i<a.size(); i++) {
             System.out.print(a.get(i) + ", ");
         }
+        System.out.println();
+        System.out.println(Zeitnehmung(t));
 
 
 
+
+    }
+
+    public static long Zeitnehmung(long t)
+    {
+        long k=System.currentTimeMillis();
+        long zeit = k-t;
+        return zeit;
+    }
+
+    public static ArrayList<Integer> getRandomList(int size)
+    {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+
+        Random zufall = new Random();
+        for (int i=0; i<size; i++)
+            a.add(zufall.nextInt(1000));
+
+        return a;
     }
 }
