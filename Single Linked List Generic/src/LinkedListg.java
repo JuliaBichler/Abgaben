@@ -6,7 +6,7 @@ public class LinkedListg<T> {
 
     public void add(T value){
         NodeG<T> node = new NodeG<T>(value);
-        //List empty
+
         if(head == null) {
             head = node;
             return;

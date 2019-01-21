@@ -32,7 +32,7 @@ public class DLLTest {
     }
 
     @org.junit.Test
-    public void delete(int index) {
+    public void delete() {
         if(index<0)
         {
             throw new RuntimeException("Index negativ");
